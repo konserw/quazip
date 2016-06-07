@@ -2,7 +2,6 @@ project (QuaZip)
 cmake_minimum_required(VERSION 2.8)
 
 find_package(Qt5Core)
-find_package(ZLIB)
 
 include_directories(${Qt5Core_INCLUDE_DIRS})
 
