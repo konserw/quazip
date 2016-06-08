@@ -448,7 +448,7 @@ QStringList JlCompress::extractFiles(QString fileCompressed, QStringList files, 
  * * la compressione di un file fallisce;
  * * non si riesce a chiudere l'oggetto zip;
  */
-QStringList JlCompress::extractDir(QString fileCompressed, QString dir) {
+QUAZIP_EXPORT QStringList JlCompress::extractDir(QString fileCompressed, QString dir) {
     // Apro lo zip
     QuaZip zip(fileCompressed);
     if(!zip.open(QuaZip::mdUnzip)) {
