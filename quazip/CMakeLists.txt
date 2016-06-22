@@ -13,7 +13,12 @@ add_library(quazip STATIC ${SRCS})
 # Must be added to enable export macro
 target_compile_definitions(quazip PRIVATE QUAZIP_BUILD
                   PUBLIC QUAZIP_STATIC)
-target_include_directories(quazip INTERFACE "${CMAKE_CURRENT_LIST_DIR}/..")
+target_include_directories(quazip 
+	INTERFACE "${CMAKE_CURRENT_LIST_DIR}/.."
+	PUBLIC
+	     "${CMAKE_CURRENT_LIST_DIR}/../../zlib"
+	     "${CMAKE_CURRENT_BINARY_DIR}/../../zlib"
+)
 
 set_target_properties(quazip PROPERTIES
   VERSION 1.0.0
