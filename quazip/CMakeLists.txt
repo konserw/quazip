@@ -8,6 +8,7 @@ file(GLOB SRCS "*.c" "*.cpp")
 file(GLOB PUBLIC_HEADERS "*.h")
 
 set(SRCS ${SRCS} ${MOC_SRCS})
+set_source_files_properties(zip.c unzip.c PROPERTIES COTIRE_EXCLUDED 1)
 add_library(quazip STATIC ${SRCS})
 
 # Must be added to enable export macro
